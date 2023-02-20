@@ -97,8 +97,9 @@ header{
                          "fourth fifth fifth";
 }
 
-img{
+.article-image{
     display: block;
     margin: 0 auto;
     max-height: 250px;
+    height: auto !important;
 }
