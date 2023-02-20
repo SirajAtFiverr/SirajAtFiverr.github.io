@@ -1,19 +1,19 @@
 
 h1 {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.4em;
+    font-size: 1.6vw;
     text-align: center;
 }
 
 h1.paper-title {
     font-family: "Times New Roman";
-    font-size: 4em;
+    font-size: 5vw;
     margin-top: 2cm;
 }
 
 p{
     font-family: "Times New Roman", Times, serif;
-    font-size: 1.2em;
+    font-size: 1.2vw;
     text-align: left;
 }
 
@@ -31,7 +31,7 @@ ul{
 
 a{
     font-family: "Times New Roman", Times, serif;
-    font-size: 2em;
+    font-size: 2.5vw;
     padding: 10px;
     color: slategray;
     text-decoration: none;
