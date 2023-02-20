@@ -7,16 +7,17 @@ body{
     padding: 30px;
 }
 
-h1 {
+.article-title {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.6vw;
     text-align: center;
 }
 
-h1.paper-title {
-    font-family: "Times New Roman";
-    font-size: 5vw;
-    margin-top: 2cm;
+.paper-title {
+    font-family: "Snell Roundhand";
+    font-weight: normal;
+    font-size: 60px; 
+    text-align: center;
 }
 
 p{
@@ -28,7 +29,6 @@ p{
 
 nav {
     grid-area: nav;
-    /* border: 3px solid black; */
 }
 
 ul{
@@ -63,6 +63,10 @@ article {
     border-right: 3px solid black;
 }
 
+header{
+    grid-area: header;
+}
+
 .article1 {
     grid-area: first;
 
@@ -87,7 +91,8 @@ article {
 
 .page {
     display: grid;
-    grid-template-areas: "nav nav nav"
+    grid-template-areas: "header header header"
+                         "nav nav nav"
                          "first second third"
                          "fourth fifth fifth";
 }
