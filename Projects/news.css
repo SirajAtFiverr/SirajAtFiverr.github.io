@@ -1,4 +1,12 @@
 
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    padding: 30px;
+}
+
 h1 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.6vw;
@@ -18,20 +26,23 @@ p{
 }
 
 
-nav{
-    display: flex;
+nav {
     grid-area: nav;
-    border: 2px solid black;
+    /* border: 3px solid black; */
 }
 
 ul{
-    list-style-type: none;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    border: 3px solid black;
+    margin: 0;
+    padding: 30px;
 }
 
 a{
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Futura";
     font-size: 2.5vw;
     color: slategray;
     text-decoration: none;
@@ -43,9 +54,13 @@ a:hover {
 
 
 article {
-   border: 2px solid black;
    padding: 20px;
-   text-align: center;
+   border-left: 3px solid black;
+   border-bottom: 3px solid black;
+}
+
+.article3, .article5{
+    border-right: 3px solid black;
 }
 
 .article1 {
@@ -69,15 +84,16 @@ article {
     grid-area: fifth;
 }
 
+
 .page {
     display: grid;
-    grid-template-columns: 3fr 4fr 3fr;
     grid-template-areas: "nav nav nav"
                          "first second third"
                          "fourth fifth fifth";
-    margin: 5%;
 }
 
 img{
-    width: 75%;
+    display: block;
+    margin: 0 auto;
+    max-height: 250px;
 }
