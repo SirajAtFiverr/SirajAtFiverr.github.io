@@ -1,0 +1,83 @@
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+h1.paper-title {
+    font-family: "Times New Roman";
+    font-size: 4em;
+    margin-top: 2cm;
+}
+
+p{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+
+nav{
+    grid-area: nav;
+    border: 2px solid black;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2em;
+    padding: 10px;
+    color: slategray;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+article {
+   border: 2px solid black;
+   padding: 20px;
+   text-align: center;
+}
+
+.article1 {
+    grid-area: first;
+
+}
+
+.article2 {
+    grid-area: second;
+}
+
+.article3 {
+    grid-area: third;
+}
+
+.article4 {
+    grid-area: fourth;
+}
+
+.article5 {
+    grid-area: fifth;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 3fr 4fr 3fr;
+    grid-template-areas: "nav nav nav"
+                         "first second third"
+                         "fourth fifth fifth";
+    margin: 60px;
+}
+
+img{
+    width: 75%;
+}
