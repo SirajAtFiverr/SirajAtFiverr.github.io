@@ -1,0 +1,147 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header{
+    background-color: #44281C;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img{
+    width: 25px;
+    margin: 0 5px;
+}
+
+.header h2{
+    color: #FBF2BA;
+    font-size: 25px;
+    margin: 0;
+}
+
+.section.name{
+    grid-area: name;
+}
+.section.items{
+    grid-area: items;
+}
+
+.section.payment{
+    grid-area: payment;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "items name"
+                         "items payment";
+}
+
+
+.section{
+    display: grid;
+    background-color: #EEE1D5;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 15px;
+
+    box-shadow: 3px 3px 10px #EEE1D5;
+}
+
+.section p{
+    margin: 0;
+    padding: 10px;
+    color: #9D7650;
+    font-size: 20px;
+}
+
+.item .quantity{
+    font-size: 20px;
+    align-self: start;
+}
+
+.item .name{
+    font-size: 20px;
+    font-weight: bold;
+    align-self: self-start;
+}
+
+.item .ingredients{
+    font-size: 15px;
+    color: #9D7650;
+    align-self: self-end;
+}
+
+.item .price{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.item{
+    display: flex;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    justify-content: space-between;
+
+    
+}
+
+.input-group{
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.input-group input{
+    padding: 10px;
+    border: 2px solid #9D7650;
+    border-radius: 20px;
+    background-color: #EEE1D5;
+}
+
+.input-label {
+    background-color: #EEE1D5;
+    color: #9D7650;
+    font-size: 11px;
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    padding: 0 2px;
+}
+
+.input-group .name-for-order{
+    width: 100%;
+}
+
+.input-group .card-number{
+    width: 100%;
+}
+
+.input-group .ccv-number{
+    width: 45%;
+}
+
+.item{
+    border-bottom: 2px  solid #DEBA96;
+}
+
+.footer{
+    background-color: #DEB993;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 20px;
+}
