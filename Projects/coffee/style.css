@@ -40,11 +40,16 @@ body{
     grid-area: payment;
 }
 
+.price-section{
+    grid-area: price;
+}
+
 .main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "items name"
-                         "items payment";
+                         "items payment"
+                         "price price";
 }
 
 
@@ -65,36 +70,37 @@ body{
     font-size: 20px;
 }
 
-.item .quantity{
-    font-size: 20px;
-    align-self: start;
+.item{
+    display: flex;
+    border-bottom: 2px  solid #DEBA96;
+    justify-content: space-between;
 }
 
-.item .name{
+.item .quantity{
+    font-size: 18px;
+}
+
+.item .details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+.item .details .name{
+    display: inline;
     font-size: 20px;
     font-weight: bold;
-    align-self: self-start;
 }
 
-.item .ingredients{
+.item .details .ingredients{
     font-size: 15px;
     color: #9D7650;
-    align-self: self-end;
 }
 
 .item .price{
     font-size: 15px;
     font-weight: bold;
-}
-
-.item{
-    display: flex;
-    /* display: grid; */
-    /* grid-template-columns: 1fr 2fr 1fr; */
-    /* grid-template-rows: 1fr 1fr 1fr; */
-    justify-content: space-between;
-
-    
 }
 
 .input-group{
@@ -103,14 +109,14 @@ body{
     margin: 10px;
 }
 
-.input-group input{
+.input-group .input{
     padding: 10px;
     border: 2px solid #9D7650;
     border-radius: 20px;
     background-color: #EEE1D5;
 }
 
-.input-label {
+.input-group .input-label {
     background-color: #EEE1D5;
     color: #9D7650;
     font-size: 11px;
@@ -132,8 +138,26 @@ body{
     width: 45%;
 }
 
-.item{
-    border-bottom: 2px  solid #DEBA96;
+.price-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 400px;
+    margin: 25px;
+}
+
+.price-section .labels, .price-section .prices{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.price-section .label, .price-section .price{
+    font-size: 20px;
+}
+
+.price-section .label:last-child, .price-section .price:last-child{
+    font-weight: bolder;
 }
 
 .footer{
