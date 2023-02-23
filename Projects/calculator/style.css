@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    background-color: aquamarine;
+}
+
+h1{
+    font-family: ;
+    font-size: 60px;
+
+    position: absolute;
+    top: 80px;
+}
+
+.calculator{
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.screen{
+        color: white;
+        background-color: black;
+        width: 100%;
+        height: 20%;
+        padding: 5px;
+
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+
+        display: flex;
+        justify-content: flex-end;
+
+        font-size: 50px;
+        align-items: center;
+}
+
+.keypad{
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+
+    height: 20%;
+}
+
+.key:last-child{
+    color: white;
+    background-color: rgb(223,151,76);
+}
+
+.key{
+    background-color: rgb(216,217,219);
+    height: 100%;
+    width: 25%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.key:hover{
+    background-color: rgba(216,217,219, .4);
+}
+
+.key:active{
+    background-color: rgb(216,217,219);
+}
+
+.key:last-child:hover{
+    background-color: rgba(223,151,76, .8);
+}
+
+.key:last-child:active{
+    background-color: rgb(223,151,76);;
+}
+
+.key.clear{
+    width: 50%
+}
+
+.key.zero{
+    width: 75%
+}
