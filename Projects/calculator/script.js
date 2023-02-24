@@ -56,10 +56,10 @@ function onClick(key){
             break;
         default:
             console.log(result);
-            if(DISPLAY.innerText == 0){
-                DISPLAY.innerText = key.innerText;
-            }else if(result != null){
+            if(result != null){
                 result = null;
+                DISPLAY.innerText = key.innerText;
+            }else if(DISPLAY.innerText == 0){
                 DISPLAY.innerText = key.innerText;
             }else{
                 DISPLAY.innerText += key.innerText;
