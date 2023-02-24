@@ -3,12 +3,7 @@ const KEYS = document.getElementsByClassName("key")
 
 num1 = null
 op = null
-
-// KEYS.forEach((key) =>{
-//     key.addEventListener("click", function (){
-//         onClick(key);
-//     })
-// });
+result = null
 
 for (let index = 0; index < KEYS.length; index++) {
     KEYS[index].addEventListener("click", function (){
@@ -40,28 +35,35 @@ function onClick(key){
         case 'x':
         case '-':
         case '+':
-            if(op != null) break;
             num1 = parseInt(DISPLAY.innerText)
-            clear()
+            clear();
             op = key.innerText
+            result = null;
             break;
         case '=':
             num2 = parseInt(DISPLAY.innerText)
             if (op === '+'){
-                DISPLAY.innerText = num1 + num2;
+                result = num1 + num2;
             }else if (op === '-'){
-                DISPLAY.innerText = num1 - num2;
+                result = num1 - num2;
             }else if (op === 'x'){
-                DISPLAY.innerText = num1 * num2;
+                result = num1 * num2;
             }else if (op === '÷'){
-                DISPLAY.innerText = num1 / num2;
+                result = num1 / num2;
             }
+            DISPLAY.innerText = result;
             op = null;
             break;
         default:
-            if(DISPLAY.innerText != 0){
+            console.log(result);
+            if(DISPLAY.innerText == 0){
+                DISPLAY.innerText = key.innerText;
+            }else if(result != null){
+                result = null;
+                DISPLAY.innerText = key.innerText;
+            }else{
                 DISPLAY.innerText += key.innerText;
-            }else {DISPLAY.innerText = key.innerText;}
+            }
             break;
     }
 }
