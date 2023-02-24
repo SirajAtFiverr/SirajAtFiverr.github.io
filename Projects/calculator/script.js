@@ -28,9 +28,11 @@ function onClick(key){
         case 'C':
             clear()
             break;
+
         case '←':
             back()
             break;
+
         case '÷':
         case 'x':
         case '-':
@@ -42,28 +44,25 @@ function onClick(key){
             break;
         case '=':
             num2 = parseInt(DISPLAY.innerText)
-            if (op === '+'){
-                result = num1 + num2;
-            }else if (op === '-'){
-                result = num1 - num2;
-            }else if (op === 'x'){
-                result = num1 * num2;
-            }else if (op === '÷'){
-                result = num1 / num2;
-            }
+
+            if      (op === '+') result = num1 + num2;
+            else if (op === '-') result = num1 - num2;
+            else if (op === 'x') result = num1 * num2;
+            else if (op === '÷') result = num1 / num2;
+            else break;
+
             DISPLAY.innerText = result;
             op = null;
             break;
+            
         default:
-            console.log(result);
-            if(result != null){
+            if      (DISPLAY.innerText != 0) DISPLAY.innerText += key.innerText;
+            else if (result != null)
+            {
                 result = null;
                 DISPLAY.innerText = key.innerText;
-            }else if(DISPLAY.innerText == 0){
-                DISPLAY.innerText = key.innerText;
-            }else{
-                DISPLAY.innerText += key.innerText;
             }
+            else DISPLAY.innerText = key.innerText;
             break;
     }
 }
