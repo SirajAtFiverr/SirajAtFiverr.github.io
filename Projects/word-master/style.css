@@ -73,13 +73,18 @@ body{
     color: white;
 }
 
-.letter-block.include{
+.letter-block.not-include{
     background-color: #888888;
     color: white;
 }
 
-.letter-block.not-include{
+.letter-block.include{
     background-color: #DAA520;
+    color: white;
+}
+
+.letter-block.correct-pos{
+    background-color: #026400;
     color: white;
 }
 
