@@ -55,7 +55,7 @@ async function validateWord(word){
 }
 
 // Main Function
-async function main(){
+(async function main(){
 
     let block_index  = 0;
 
@@ -67,8 +67,11 @@ async function main(){
     const processedResponse = await promise.json();
     // Stop Loading
     hideSpinner();
+    // setting secret word
+    const SECRET_WORD = processedResponse.word;
+    // const SECRET_WORD = "SPOON";
     // printing secret word to console
-    console.log(processedResponse.word);
+    console.log(SECRET_WORD);
     // enabling keys to be presssed
     document.addEventListener("keyup", 
     // if key any key is pressed
@@ -109,7 +112,7 @@ async function main(){
                 }
 
                 // if word matched perform wining animation and go out
-                if(word === processedResponse.word.toUpperCase()){
+                if(word === SECRET_WORD.toUpperCase()){
                     alert("You Have Won!!!!");
                     performWinningAnimation(block_index);
                     block_index = 0;
@@ -121,7 +124,7 @@ async function main(){
                 for(let i=0; i<5; i++){
 
                     // if secret word has ith character at correct position
-                    if(processedResponse.word.toUpperCase().indexOf(word[i]) == i){
+                    if(SECRET_WORD.toUpperCase().indexOf(word[i]) == i){
                         // add class "correct-pos" in ith element to change it's color to green using css
                         blocks[i].classList.add("correct-pos");
                         continue;
@@ -131,7 +134,7 @@ async function main(){
                     console.log(word.substr(i).includes(word[i]))
 
                     // if secret word has not ith index cahracter
-                    if((!processedResponse.word.toUpperCase().includes(word[i])) || 
+                    if((!SECRET_WORD.toUpperCase().includes(word[i])) || 
                        word.substring(0, i).includes(word[i]))
                     {
                         // add class "not-include" in ith element to change it's color to gray using css
@@ -150,12 +153,11 @@ async function main(){
                 // if there if all rows completed
                 if(blocks.length == 0){
                     // display popup message and secret word 
-                    alert("You Have Lost, The word was " + processedResponse.word.toUpperCase());
+                    alert("You Have Lost, The word was " + SECRET_WORD.toUpperCase());
                 }
             });
             
             }
     });
-}
-
-main();
+    
+})();
