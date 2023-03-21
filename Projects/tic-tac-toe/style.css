@@ -37,12 +37,11 @@ header p{
 }
 
 .board {
-    max-width: 50%;
     margin: 1em auto;
     margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(3, 180px);
-    grid-template-rows: repeat(3, 120px);
+    grid-template-columns: repeat(3, 15vw);
+    grid-template-rows: repeat(3, 15vh);
     grid-gap: 1rem;
     background-color: teal;
 }
