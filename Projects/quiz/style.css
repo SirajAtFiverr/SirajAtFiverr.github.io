@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding-top: 5rem;
+}
+
+header { 
+    margin: 2rem auto;
+    width: 50vw;
+}
+
+header h1{
+    font-family: monospace;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+header p{
+    font-family: Arial;
+    font-size: 1.2rem;
+}
+
+
+main {
+        display: flex;
+        align-items: center;
+        flex-flow: column wrap;
+        gap: 2rem;
+}
+
+.quiz-box{
+    width: 50vw;
+    height: 10vh;
+    box-shadow: -4px 2px 16px -5px rgba(0,0,0,0.82);
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.options{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 4px;
+}
+
+button{
+    width: 50vw;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    border-radius: 5px;
+}
