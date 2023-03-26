@@ -24,26 +24,44 @@ header p{
     font-size: 1.2rem;
 }
 
+header .score{
+    font-family: monospace;
+    margin-top: 1rem;
+    text-align: center;
+}
+
 
 main {
         display: flex;
         align-items: center;
         flex-flow: column wrap;
-        gap: 2rem;
 }
 
 .quiz-box{
+
+    /* Box Setting */
     width: 50vw;
     height: 10vh;
-    box-shadow: -4px 2px 16px -5px rgba(0,0,0,0.82);
     border: 1px solid black;
     border-radius: 8px;
+    box-shadow: -4px 2px 16px -5px rgba(0,0,0,0.82);
+    margin-bottom: 1rem;
+
+    /* font setting */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: 500;
+    
+    /* setting text alignment */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .options{
     display: flex;
     flex-flow: column wrap;
-    gap: 4px;
+    gap: 8px;
 }
 
 button{
@@ -52,4 +70,21 @@ button{
     font-size: 1.2rem;
     border: 2px solid black;
     border-radius: 5px;
+}
+
+button.correct{
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+button.incorrect{
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.explanation {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    width: 50vw;
+    text-align: center;
+
+    padding: 1rem 0;
 }

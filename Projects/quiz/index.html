@@ -12,18 +12,30 @@
 <body>
 
     <header>
-        <h1>Quiz in JavaScript</h1>
-        <p>Do you JS? Find Out!</p>
+        <section class="text">
+            <h1>Quiz in JavaScript</h1>
+            <p>Do you JS? Find Out!</p>
+        </section>
+        <section class="score">
+            <p>Score: <span class="score-value">0</span> / <span class="score-total">0</span></p>
+        </section>
     </header>
-    <main>
-        <section class="quiz-box">
 
+    <main>
+        <section class="quiz-box statement">
         </section>
         <section class="options">
-            <button class="true">true</button>
-            <button class="false">false</button>
+            <button class="true" value="true">true</button>
+            <button class="false" value="false">false</button>
         </section>
+
+        <section class="explanation">
+        </section>
+
+        <button class="next">Next Question</button>
+     
     </main>
 
 </body>
+    <script src="script.js"></script>
 </html>
